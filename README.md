@@ -45,7 +45,8 @@ It is calculated as:
 13. Stop.
 
 
-# Program: 
+# Program:
+```
 Name: Monika V
 Reg.no: 25017555
 Slot.no:3P1-1
@@ -92,13 +93,14 @@ print(f"The Standard deviation of arrival from feeder is {SD:.3f}")
 
 colab link:https://colab.research.google.com/drive/1dqcq9kmSWHh8LMwbJ7XWXjdYkfLm-DdV?usp=sharing
 
-
+```
 # Output:
+```
 Enter arrival data: 54 67 98 24 60 12 34
 The Mean arrival rate is 49.857
 The Variance of arrival from feeder is 726.408
 The Standard deviation of arrival from feeder is 26.952
-
+```
 
 # Result:
 	The mean and variance of arrivals of objects from feeder using probability distribution are calculated. 
