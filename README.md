@@ -46,19 +46,61 @@ It is calculated as:
 
 
 # Program: 
+Name: Monika V
+Reg.no: 25017555
+Slot.no:3P1-1
+
+import numpy as np
+
+# Input: Enter the number of arrivals separated by space
+L = [int(i) for i in input("Enter arrival data: ").split()]
+N = len(L)
+M = max(L)
+
+x = []
+f = []
+
+# Counting frequency of each arrival
+for i in range(M + 1):
+    c = 0
+    for j in range(N):
+        if L[j] == i:
+            c += 1
+    f.append(c)
+    x.append(i)
+
+sf = np.sum(f)
+
+# Calculating probability for each occurrence
+p = [f[i] / sf for i in range(M + 1)]
+
+# Mean of arrival (expected value)
+mean = np.inner(x, p)
+
+# Second moment (E[X²])
+EX2 = np.inner(np.square(x), p)
+
+# Variance and standard deviation
+var = EX2 - mean**2
+SD = np.sqrt(var)
+
+print(f"The Mean arrival rate is {mean:.3f}")
+print(f"The Variance of arrival from feeder is {var:.3f}")
+print(f"The Standard deviation of arrival from feeder is {SD:.3f}")
 
 
 
-
-
-
+colab link:https://colab.research.google.com/drive/1dqcq9kmSWHh8LMwbJ7XWXjdYkfLm-DdV?usp=sharing
 
 
 # Output:
+Enter arrival data: 54 67 98 24 60 12 34
+The Mean arrival rate is 49.857
+The Variance of arrival from feeder is 726.408
+The Standard deviation of arrival from feeder is 26.952
 
 
-
-# Result: 
+# Result:
 	The mean and variance of arrivals of objects from feeder using probability distribution are calculated. 
 
 
